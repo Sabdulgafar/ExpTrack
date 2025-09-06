@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <!-- income section -->
+            <div class="income">
+                <label>Income: </label><input type="text" name="income" id="income">
+                <input type="submit" value="Sumbit" onclick="setIncomeFigure()">
+                <progress id="incomeBar" value="" max=""></progress>
+                Remaining: <span id="remain"></span>
+                
+            </div>
+        <div class="category">
+            <!-- category section -->
+            <ul>
+                <li><label>Food: </label><input type="text" name="" id="food"></li>
+                <li><label>Transport: </label><input type="text" name="" id="transport"></li>
+                <li><label>Rent: </label><input type="text" name="" id="rent"></li>
+                <li><label>Utility bills: </label><input type="text" name="" id="utilitybill"></li>
+                <li><label>Savings: </label><input type="text" name="" id="savings"></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

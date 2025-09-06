@@ -1,0 +1,31 @@
+.container{
+    width: 370px;
+    padding-top: 1.5rem;
+}
+.income{
+    width: max-content;
+}
+.income, .container{
+    display: block;
+    margin: auto;
+}
+.category ul li{
+    list-style: none;
+}
+.category ul li label{
+    display: block;
+    margin-top: 0.5rem;
+}
+#incomeBar{
+    display: block;
+    height: 0.75rem;
+    width: 100%;
+    border-radius: 10px;
+    margin: 1.25rem 0rem;
+    border: none;
+}
+
+/* mobile view */
+@media only screen and (max-width: 600px) {
+    
+}
