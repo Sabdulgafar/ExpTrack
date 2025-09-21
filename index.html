@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-            <!-- income section -->
+    <!-- <div class="container">
+            <!-- income section ->
             <div class="income">
                 <label>Income: </label><input type="text" name="income" id="income">
                 <input type="submit" value="Sumbit" onclick="setIncomeFigure()">
@@ -17,7 +17,7 @@
                 
             </div>
         <div class="category">
-            <!-- category section -->
+            <!-- category section ->
             <ul>
                 <li><label>Food: </label><input type="text" name="" id="food"></li>
                 <li><label>Transport: </label><input type="text" name="" id="transport"></li>
@@ -25,9 +25,49 @@
                 <li><label>Utility bills: </label><input type="text" name="" id="utilitybill"></li>
                 <li><label>Savings: </label><input type="text" name="" id="savings"></li>
             </ul>
+            <button class="checkButton" onclick="checker()">Check</button>
+        </div>
+    </div> -->
+    <div id="UserInfo">
+        <h3>Enter Your details</h3>
+        <form>
+            <input type="text" placeholder="John Doe..." id="UserNameInput" class="input">
+            
+            <input type="text" placeholder="Income" id="UserBalanceInput" class="input">
+            
+            <a class="input" style="height: 30px; width: 200px; background-color: black; color: white;" onclick="CollectUserInfo()">Submit</a>
+        </form>
+    </div>
+
+    <div class="AppContainer">
+        <h3>Hello <span id="UserName"> </span></h3>
+        <div class="DashboardInfo patchSection">
+            <h1>Balance: <span id="Currency"></span><input type="text" name="" id="UserBalance" value="00000"></h1>
+
+            <div class="flex">
+                <div>Income: <input type="text" name="" id="UserIncome" value="00000"></div>
+                <div>Expenses: <input type="text" name="" id="UserExpenses" value=''></div>
+            </div>
+        </div>
+        <br/>
+        <div class="patchSection transaction-section">
+            <h2 class="TransactionTitle">Add Transactions</h2>
+            <form action="">
+                <input type="text" placeholder="Transaction title" id="TransactionTitle">
+                <input type="number" placeholder="Enter amount" id="TransactionAmount">
+                <select id="ExpInc">
+                    <option value="expense" selected>Expense</option>
+                    <option value="income">Income</option>
+                </select>
+                <a class="input" style="height: 20px; width: 250px; background-color: black; color: white; display: block; margin: auto;" onclick="AddTransaction()" align="center">Add Transaction</a>
+            </form>
+        </div>
+        <br/>
+        <div class="patchSection">
+
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
