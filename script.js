@@ -43,6 +43,8 @@
 // }
 
 let Username,UserBalance,UserIncome,UserExpense,expinc;
+
+
 function CollectUserInfo(){
     Username = document.getElementById('UserNameInput').value;
     UserBalance = document.getElementById('UserBalanceInput').value;
@@ -54,20 +56,49 @@ function CollectUserInfo(){
     document.getElementById('UserInfo').style.display="none";
 }
 
-function AddTransaction(){
-    expinc=document.getElementById('ExpInc').value;
-    UserExpense=document.getElementById('UserExpenses').value;
-    UserBalance=document.getElementById('UserBalance').value;
-    if(expinc==='expense'){
-        let TransactionAmount=document.getElementById('TransactionAmount').value;
+// function AddTransaction(){
+//     expinc=document.getElementById('ExpInc').value;
+//     UserExpense=document.getElementById('UserExpenses').value;
+//     UserBalance=document.getElementById('UserBalance').value;
+//     if(expinc==='expense'){
+//         let TransactionAmount=document.getElementById('TransactionAmount').value;
         
-        let newBalance=(eval(UserBalance-TransactionAmount));
-        console.log(newBalance);
-        document.getElementById('UserBalance').value=newBalance;
+//         let newBalance=(eval(UserBalance-TransactionAmount));
+//         document.getElementById('UserBalance').value=newBalance;
 
-        Number(UserExpense);
-        let newExpense=(eval(UserExpense+TransactionAmount));
-        document.getElementById('UserExpenses').value=newExpense;
-    }
-    document.getElementById('TransactionAmount').value="";
+//         let newExpense=(eval(TransactionAmount+UserExpense));
+//         // document.getElementById('UserExpenses').value=newExpense;
+//         console.log(newExpense);
+//     }
+//     document.getElementById('TransactionAmount').value="";
+// }
+
+function AddTransaction(){
+        let expinc = document.getElementById('ExpInc').value;
+        let UserExpense = Number(document.getElementById('UserExpenses').value);
+        let UserIncome = Number(document.getElementById('UserIncome').value);
+        let UserBalance = Number(document.getElementById('UserBalance').value);
+        let TransactionAmount = Number(document.getElementById('TransactionAmount').value);
+
+        // console.log(expinc, UserExpense);
+        let newBalance, newExpense, newIncome;
+    
+        if (expinc === 'expense') {
+            newBalance = UserBalance - TransactionAmount;
+            console.log(newBalance);
+            document.getElementById('UserBalance').value = newBalance;
+    
+            newExpense = UserExpense + TransactionAmount;
+            document.getElementById('UserExpenses').value = newExpense;
+        }else if(expinc==='income'){
+            newBalance = UserBalance + TransactionAmount;
+            document.getElementById('UserBalance').value=newBalance;
+
+            newIncome = UserIncome + TransactionAmount;
+            document.getElementById('UserIncome').value=newIncome;
+        }else{
+            console.log("Throw error");
+        }
+    
+        document.getElementById('TransactionAmount').value = "";
 }

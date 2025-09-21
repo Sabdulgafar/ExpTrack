@@ -31,9 +31,9 @@
     <div id="UserInfo">
         <h3>Enter Your details</h3>
         <form>
-            <input type="text" placeholder="John Doe..." id="UserNameInput" class="input">
+            <input type="text" placeholder="Your Name" id="UserNameInput" class="input">
             
-            <input type="text" placeholder="Income" id="UserBalanceInput" class="input">
+            <input type="text" placeholder="Your Income" id="UserBalanceInput" class="input">
             
             <a class="input" style="height: 30px; width: 200px; background-color: black; color: white;" onclick="CollectUserInfo()">Submit</a>
         </form>
@@ -46,12 +46,12 @@
 
             <div class="flex">
                 <div>Income: <input type="text" name="" id="UserIncome" value="00000"></div>
-                <div>Expenses: <input type="text" name="" id="UserExpenses" value=''></div>
+                <div>Expenses: <input type="text" name="" id="UserExpenses" value=""></div>
             </div>
         </div>
         <br/>
         <div class="patchSection transaction-section">
-            <h2 class="TransactionTitle">Add Transactions</h2>
+            <h2 class="PatchTitle">Add Transactions</h2>
             <form action="">
                 <input type="text" placeholder="Transaction title" id="TransactionTitle">
                 <input type="number" placeholder="Enter amount" id="TransactionAmount">
@@ -64,7 +64,8 @@
         </div>
         <br/>
         <div class="patchSection">
-
+            <h2 class="PatchTitle">Transaction History</h2>
+            <div class="list-container"></div>
         </div>
     </div>
 
