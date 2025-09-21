@@ -101,4 +101,5 @@ function AddTransaction(){
         }
     
         document.getElementById('TransactionAmount').value = "";
+        document.getElementById('TransactionTitle').value = "";
 }

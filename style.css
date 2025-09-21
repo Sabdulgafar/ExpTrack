@@ -40,7 +40,7 @@
     background-color: rgb(216, 216, 216);
     padding: 0.5rem;
     border-radius: 10px;
-    display: none;
+    display: block;
     margin: auto;
     position: absolute;
     left: 20%;
