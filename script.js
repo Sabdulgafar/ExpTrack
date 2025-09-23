@@ -41,6 +41,7 @@
 
 
 // }
+document.getElementById('UserExpenses').value="";
 
 let Username,UserBalance,UserIncome,UserExpense,expinc;
 
@@ -72,13 +73,23 @@ function CollectUserInfo(){
 //     }
 //     document.getElementById('TransactionAmount').value="";
 // }
-
 function AddTransaction(){
         let expinc = document.getElementById('ExpInc').value;
         let UserExpense = Number(document.getElementById('UserExpenses').value);
         let UserIncome = Number(document.getElementById('UserIncome').value);
         let UserBalance = Number(document.getElementById('UserBalance').value);
         let TransactionAmount = Number(document.getElementById('TransactionAmount').value);
+
+        let listContainer = document.getElementById('listContainer');
+        let TransactionTitle = document.getElementById('TransactionTitle').value.trim();
+
+        if (TransactionTitle !== ""){
+            const list = document.createElement("li");
+            list.textContent=TransactionTitle+" "+TransactionAmount+" ("+expinc+")";
+            listContainer.appendChild(list);
+        }else{
+            alert("You may need to input transaction title");
+        }
 
         // console.log(expinc, UserExpense);
         let newBalance, newExpense, newIncome;
